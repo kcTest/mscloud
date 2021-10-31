@@ -1,0 +1,23 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-server #注册进eureka 的微服务名
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/kcTest/mscloud.git # github上项目对应仓库的名称
+          # 搜索目录
+          search-paths:
+            - mscloud/cloud-config-center3344/
+          username: kcTest
+          password: 85014619woshiwww
+      #读取分支
+      label: master
+#eureka注册中心地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
