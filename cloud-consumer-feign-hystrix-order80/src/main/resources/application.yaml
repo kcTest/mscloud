@@ -1,0 +1,23 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name:
+      cloud-consumer-hystrix-order
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+
+feign:
+  circuitbreaker:
+    enabled: true #true 配合使用@FeignClient指定回退方法， 但是client超时时间设置无效了 又回到默认1秒 ;HystrixProperty设置的时间也无效
+  client:
+    config:
+      default:
+        ConnectionTimeout: 10000
+        ReadTimeout: 10000
