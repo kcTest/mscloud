@@ -8,13 +8,15 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/kcTest/mscloud.git # github上项目对应仓库的名称
-          username: kcTest
-          password: 85014619woshiwww
+          #ssh  私有  ssh-keygen -m pem -t rsa -C "xxx@xx.com"
+          uri: git@github.com:kcTest/mscloud-config-center.git
+          #https 公有
+          #          uri: https://github.com/kcTest/mscloud-config-center.git # github上项目对应仓库的名称
+          #          username: 763336180@qq.com
+          #          password: 85014619woshiwww
+          #          skip-ssl-validation: true
           # 搜索目录
-          search-paths:
-            - mscloud/cloud-config-center3344/
-          skip-ssl-validation: true
+          search-paths: /
       #读取分支
       label: master
 #eureka注册中心地址
