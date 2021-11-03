@@ -69,8 +69,8 @@ public class PaymentController {
     }
 
     @GetMapping(value = "/lb")
-    public String getPaymentLB(){
-        return  serverPort;
+    public String getPaymentLB() {
+        return serverPort;
     }
 
     @GetMapping(value = "/feign/timeout")
@@ -81,5 +81,10 @@ public class PaymentController {
             e.printStackTrace();
         }
         return serverPort;
+    }
+
+    @GetMapping(value = "/zipkin")
+    public String paymentZipkin() {
+        return "支付服务zipkin接口返回，调用后查看zipkin中的链路信息";
     }
 }

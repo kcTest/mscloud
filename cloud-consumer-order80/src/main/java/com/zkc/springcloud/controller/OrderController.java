@@ -52,6 +52,10 @@ public class OrderController {
     @Resource
     private DiscoveryClient discoveryClient;
 
+    /**
+     * 使用自定义负载均衡
+     * @return
+     */
     @GetMapping(value = "/lb")
     public String getPaymentLB() {
 
@@ -70,4 +74,14 @@ public class OrderController {
 
         return "未找到服务";
     }
+
+    /**
+     * 之前已使用自定义负载均衡，无法通过服务名找到地址，当前暂不恢复，先写成本地地址
+     * @return
+     */
+    @GetMapping("/zipkin")
+    public String paymentZipkin() {
+        return restTemplate.getForObject("http://localhost:8001/payment/zipkin/", String.class);
+    }
+
 }
