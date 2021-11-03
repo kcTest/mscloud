@@ -19,8 +19,22 @@ spring:
           search-paths: /
       #读取分支
       label: master
+  #服务端添加消息总线功能 rabbitmq配置
+  rabbitmq:
+    host: centos003
+    port: 5620
+    username: admin
+    password: 8585739wo
+
 #eureka注册中心地址
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka
+
+#服务端添加消息总线功能 rabbitmq消息总线功能配置
+management:
+  endpoints: #暴露bus刷新配置的端点
+    web:
+      exposure:
+        include: "busrefresh"

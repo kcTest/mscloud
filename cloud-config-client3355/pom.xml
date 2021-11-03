@@ -17,6 +17,11 @@
     </properties>
 
     <dependencies>
+        <!--        客户端添加消息总线功能 补充依赖spring-cloud-starter-bus-amqp-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>

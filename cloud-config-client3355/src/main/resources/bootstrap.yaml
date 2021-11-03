@@ -15,6 +15,13 @@ spring:
       uri: http://localhost:3344 #配置中心地址
       # 读取配置中心 http://config-3344.com:3344/master/config-dev.yaml
 
+  #客户端添加消息总线功能 rabbitmq配置
+  rabbitmq:
+    host: centos003
+    port: 5610
+    username: admin
+    password: 8585739wo
+
 #注册到eureka
 eureka:
   client:
