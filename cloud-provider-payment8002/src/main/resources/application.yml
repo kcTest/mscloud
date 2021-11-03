@@ -8,7 +8,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://117.50.163.39:3306/mscloud?useUnicode=true&characterEncoding=utf-8&useSSL=true
+    url: jdbc:mysql://centos003:3306/mscloud?useUnicode=true&characterEncoding=utf-8&useSSL=true
     username: root
     password: 8585739wo
 

@@ -6,7 +6,7 @@ spring:
   #consul 注册中心地址
   cloud:
     consul:
-      host: 117.50.163.39
+      host: centos003
       port: 8500
       discovery:
         service-name: ${spring.application.name}
