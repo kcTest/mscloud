@@ -1,0 +1,25 @@
+#bootstrap需要引入依赖
+
+#nacos配置
+server:
+  port: 3377
+
+spring:
+  application:
+    name: nacos-config-client
+  cloud:
+    nacos:
+      discovery:
+        #server-addr: centos003:8848 #nacos服务注册配置中心地址
+        server-addr: centos003:1111 #nacos服务注册配置中心地址
+      config:
+        #server-addr: centos003:8848 #nacos服务注册配置中心地址
+        server-addr: centos003:1111 #nacos服务注册配置中心地址
+        file-extension: yaml
+        namespace: fcc8cd45-994f-4b19-a530-6f417425e8f4
+        #group: TEST_GROUP
+        group: DEV_GROUP
+
+        # ${prefix}-${spring.profiles.active}.${file-extension}
+        # 【默认应用名称或配置config.prefix】-【当前环境】-【文件格式】
+
