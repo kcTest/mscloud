@@ -18,25 +18,28 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.alibaba.csp</groupId>
-            <artifactId>sentinel-transport-simple-http</artifactId>
+            <!--            使用payment entity-->
+            <groupId>com.zkc.springcloud</groupId>
+            <artifactId>cloud-api-commons</artifactId>
+            <version>${project.version}</version>
         </dependency>
+
         <dependency>
-<!--            注册进nacos-->
+            <!--            注册进nacos-->
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
         <dependency>
-<!--            sentinel持久化-->
+            <!--            sentinel持久化-->
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-datasource-nacos</artifactId>
         </dependency>
-<!--        被sentinel监控-->
+        <!--        被sentinel监控-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
         </dependency>
-<!--        通过服务名调用 超时控制-->
+        <!--        通过服务名调用 超时控制-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
