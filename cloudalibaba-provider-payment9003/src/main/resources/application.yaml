@@ -1,0 +1,16 @@
+server:
+  port: 9003
+
+spring:
+  application:
+    name: nacos-payment-provider
+  cloud:
+    nacos:
+      discovery:
+        #server-addr: centos003:8848 #配置nacos地址
+        server-addr: centos003:1111 #配置nacos地址
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
