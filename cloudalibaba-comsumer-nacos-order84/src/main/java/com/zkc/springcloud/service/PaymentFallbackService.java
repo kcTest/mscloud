@@ -1,4 +1,4 @@
-package com.zkc.sringcloud.service;
+package com.zkc.springcloud.service;
 
 import com.zkc.springcloud.entities.CommonResult;
 import com.zkc.springcloud.entities.Payment;

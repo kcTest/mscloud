@@ -1,10 +1,10 @@
-package com.zkc.sringcloud.controller;
+package com.zkc.springcloud.controller;
 
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.zkc.springcloud.entities.CommonResult;
 import com.zkc.springcloud.entities.Payment;
-import com.zkc.sringcloud.service.PaymentService;
+import com.zkc.springcloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
