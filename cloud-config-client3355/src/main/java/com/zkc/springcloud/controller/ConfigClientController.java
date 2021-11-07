@@ -1,4 +1,4 @@
-package com.zkc.sprincloud.controller;
+package com.zkc.springcloud.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

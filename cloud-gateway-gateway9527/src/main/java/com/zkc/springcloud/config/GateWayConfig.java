@@ -1,4 +1,4 @@
-package com.zkc.sprincloud.config;
+package com.zkc.springcloud.config;
 
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
