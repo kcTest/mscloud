@@ -1,0 +1,58 @@
+server:
+  port: 2003
+
+spring:
+  application:
+    name: seata-account-service
+  cloud:
+    alibaba:
+      seata:
+        #自定义事务组名称需要与seata-server中的对应
+        tx-service-group: my_test_tx_group
+
+    nacos:
+      discovery:
+        server-addr: centos003:1111
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://centos003:3306/seata_order
+    username: root
+    password: 8585739wo
+
+feign:
+  #  hystrix:
+  #    enable: false;
+  circuitbreaker:
+    enabled: false
+
+logging:
+  level:
+    io:
+      seata: info
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
+
+seata:
+  registry:
+    type: nacos
+    nacos:
+      application: seata-server
+      server-addr: centos003:1111
+      namespace: 74143c0f-201c-4033-9f01-0d96fcf49981
+      group: SEATA_GROUP
+      cluster: default
+      username:
+      password:
+
+  config:
+    type: nacos
+    nacos:
+      server-addr: centos003:1111
+      namespace: 74143c0f-201c-4033-9f01-0d96fcf49981
+      group: SEATA_GROUP
+      username:
+      password:
+
