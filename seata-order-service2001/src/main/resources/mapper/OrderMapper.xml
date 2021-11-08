@@ -14,9 +14,10 @@
         <result column="status" property="status" jdbcType="INTEGER"/>
     </resultMap>
 
-    <insert id="create">
-        insert into t_order(user_id, product_id, count, money, status)
-        VALUES (#{userId}, #{productId}, #{count}, #{money}, #{status});
+    <insert id="create" parameterType="com.zkc.springcloud.alibaba.domain.Order"
+            useGeneratedKeys="true" keyProperty="id">
+        insert into t_order(user_id, product_id, count, money)
+        VALUES (#{userId}, #{productId}, #{count}, #{money});
     </insert>
 
     <update id="update">
