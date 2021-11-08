@@ -25,6 +25,11 @@ feign:
   #    enable: false;
   circuitbreaker:
     enabled: false
+  client:
+    config:
+      default:
+        connect-timeout: 10000
+        read-timeout: 10000
 
 logging:
   level:

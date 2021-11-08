@@ -5,6 +5,7 @@ import com.zkc.springcloud.alibaba.domain.Order;
 import com.zkc.springcloud.alibaba.service.AccountService;
 import com.zkc.springcloud.alibaba.service.OrderService;
 import com.zkc.springcloud.alibaba.service.StorageService;
+import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +24,7 @@ public class OrderServiceImpl implements OrderService {
     @Resource
     private StorageService storageService;
 
-  //  @GlobalTransactional(name = "globalTran", rollbackFor = Exception.class)
+    @GlobalTransactional(name = "globalTran", rollbackFor = Exception.class)
     @Override
     public void create(Order order) {
         log.info("①---->订单创建开始");
