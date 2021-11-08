@@ -17,13 +17,13 @@ public class AccountServicempl implements AccountService {
 
     @Override
     public void decrease(Long userId, BigDecimal money) {
-        log.info("①---->库存扣减开始");
+        log.info("①---->账户扣减开始");
 
         //模拟超时异常 全局事务回滚
 
         accountDao.decrease(userId, money);
 
-        log.info("①---->库存扣减完成");
+        log.info("①---->账户扣减完成");
 
     }
 }

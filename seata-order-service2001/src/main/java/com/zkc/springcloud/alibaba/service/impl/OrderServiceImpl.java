@@ -37,7 +37,7 @@ public class OrderServiceImpl implements OrderService {
         log.info("③---->订单微服务开始调用账户，做扣减====结束");
 
         log.info("③---->修改订单状态开始");
-        orderDao.update(order.getId(), 0);
+        orderDao.update(order.getId(), 1);
         log.info("③---->修改订单状态结束");
 
         log.info("①---->订单创建已完成");

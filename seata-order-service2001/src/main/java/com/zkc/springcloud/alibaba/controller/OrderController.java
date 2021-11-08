@@ -5,6 +5,7 @@ import com.zkc.springcloud.alibaba.domain.Order;
 import com.zkc.springcloud.alibaba.service.OrderService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,7 +20,7 @@ public class OrderController {
     private OrderService orderService;
 
     @PostMapping(value = "/create")
-    public CommonResult create(Order order) {
+    public CommonResult create(@RequestBody Order order) {
         orderService.create(order);
         return new CommonResult(200, "订单创建成功");
     }

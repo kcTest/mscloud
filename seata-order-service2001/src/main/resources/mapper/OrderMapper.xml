@@ -21,7 +21,7 @@
     <update id="update">
         update t_order
         set status=1
-        where id = #{id}
+        where id = #{orderId}
           and status = #{status}
     </update>
 </mapper>

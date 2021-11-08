@@ -16,7 +16,7 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://centos003:3306/seata_order
+    url: jdbc:mysql://centos003:3306/seata_account
     username: root
     password: 8585739wo
 

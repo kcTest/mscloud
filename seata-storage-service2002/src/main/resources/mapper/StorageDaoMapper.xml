@@ -15,7 +15,7 @@
     <update id="decrease">
         update t_storage
         set used=used + #{count},
-            residue=redidue - #{count},
-            where product_id = #{productId}
+            residue=residue - #{count}
+        where product_id = #{productId}
     </update>
 </mapper>
