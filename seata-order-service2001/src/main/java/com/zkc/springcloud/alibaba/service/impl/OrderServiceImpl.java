@@ -26,7 +26,8 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public void create(Order order) {
         log.info("①---->订单创建开始");
-        orderDao.create(order);
+        Long orderId = orderDao.create(order);
+        order.setId(orderId);
 
         log.info("②---->订单微服务开始调用库存，做扣减");
         storageService.decrease(order.getProductId(), order.getCount());
@@ -37,7 +38,7 @@ public class OrderServiceImpl implements OrderService {
         log.info("③---->订单微服务开始调用账户，做扣减====结束");
 
         log.info("③---->修改订单状态开始");
-        orderDao.update(order.getId(), 1);
+        orderDao.update(order.getId());
         log.info("③---->修改订单状态结束");
 
         log.info("①---->订单创建已完成");

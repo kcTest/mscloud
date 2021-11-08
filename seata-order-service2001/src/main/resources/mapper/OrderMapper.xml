@@ -14,14 +14,15 @@
         <result column="status" property="status" jdbcType="INTEGER"/>
     </resultMap>
 
-    <select id="create">
+    <insert id="create">
         insert into t_order(user_id, product_id, count, money, status)
-        VALUES (#{userId}, #{productId}, #{count}, #{money}, #{status})
-    </select>
+        VALUES (#{userId}, #{productId}, #{count}, #{money}, #{status});
+    </insert>
+
     <update id="update">
         update t_order
         set status=1
         where id = #{orderId}
-          and status = #{status}
+          and status = 0
     </update>
 </mapper>
