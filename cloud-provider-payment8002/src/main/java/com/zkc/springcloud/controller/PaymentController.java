@@ -23,7 +23,7 @@ public class PaymentController {
     public CommonResult create(@RequestBody Payment payment) {
 
         int i = paymentService.create(payment);
-        log.info("****插入结果****：payment：%s, id:%s".formatted(payment, i));
+        log.info("****插入结果****：payment：" + payment + ", id:" + i);
         if (i > 0) {
             return new CommonResult(200, "插入数据库成功,serverPort:" + serverPort, i);
         }
@@ -35,7 +35,7 @@ public class PaymentController {
     public CommonResult getPaymentById(@PathVariable("id") Long id) {
 
         Payment payment = paymentService.getPaymentById(id);
-        log.info("******查询结果******：%s".formatted(payment));
+        log.info("******查询结果******：" + payment);
         if (payment != null) {
             return new CommonResult(200, "查询成功,serverPort:" + serverPort, payment);
         }
