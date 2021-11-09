@@ -1,3 +1,3 @@
-###  do not forget to hide password, config hosts
 
 ###清理警告
+###  最后统一整理项目中地址密码等问题
