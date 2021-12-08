@@ -12,8 +12,8 @@ spring:
           uri: git@github.com:kcTest/mscloud-config-center.git
           #https 公有
           #          uri: https://github.com/kcTest/mscloud-config-center.git # github上项目对应仓库的名称
-          #          username: 763336180@qq.com
-          #          password: 85014619woshiwww
+          #          username: 
+          #          password: 
           #          skip-ssl-validation: true
           # 搜索目录
           search-paths: /
