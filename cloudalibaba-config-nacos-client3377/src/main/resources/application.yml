@@ -7,3 +7,7 @@ spring:
 
 #nacos-config-client-dev.yaml
 #nacos-config-client-test.yaml
+
+config:
+  info: 
+    msg: msg-app
